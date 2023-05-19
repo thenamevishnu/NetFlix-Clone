@@ -12,17 +12,16 @@ function RowPost(props) {
         axios.get(props.url).then(response=>{
             setMovie(response.data?.results)
         }).catch(err=>alert("Network Error"))
-    })
-
+    },[props.url])
+    
     const handleMovie = (id) =>{
-        console.log(id)
         axios.get(`/movie/${id}/videos?api_key=${apiKey}`).then(response=>{
             if(response?.data?.results.length === 0){
-                console.log("No Videos Found!")
+                alert("No videos is there!")
             }else{
-                setYtId(response.data.results[0])
+                setYtId(response?.data?.results[0]?.key)
             }
-        }).catch(err=>console.log("No Videos Found!"))
+        }).catch(err=>alert("No videos is there!"))
     }
     const opts = {
         height: "390",
@@ -31,6 +30,7 @@ function RowPost(props) {
           autoplay: 1,
         },
       };
+
     return (
         <div className="row">
             <h2>{props.title}</h2>
@@ -38,12 +38,13 @@ function RowPost(props) {
                 {
                     movie.map((obj)=>{
                         return(
-                            <img key={obj.id} onClick={()=>handleMovie(obj.id)} className={props.isSmall ? "poster" : "main-poster"} src={obj?imgUrl+obj.backdrop_path:""} alt={obj?obj.title:""} />
+                            <img key={obj.id} onClick={()=>{handleMovie(obj.id)}} className={props.isSmall ? "poster" : "main-poster"} src={obj?imgUrl+obj.backdrop_path:""} alt={obj?obj.title:""} />
                         );
                     })
                 } 
             </div>
-            {ytId && <Youtube opts={opts} videoId={ytId.key}/>}
+               <div>  
+                { ytId && <Youtube opts={opts} videoId={ytId}/> } </div>
         </div>
     )
 }

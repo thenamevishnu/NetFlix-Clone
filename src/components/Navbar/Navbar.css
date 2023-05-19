@@ -22,3 +22,39 @@
     top: 12px;
     width: 30px;
 }
+
+.left-links{
+    display: flex;
+    list-style: none;
+    z-index: 1;
+    color: #fff;
+    margin-left: 170px;
+    margin-top: 15px;
+}
+
+.left-links li{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.left-links li:hover{
+    color: #c90000;
+}
+
+.right-icons{
+    list-style: none;
+    display: flex;
+    z-index: 1;
+    color: #fff;
+    margin-right: 90px;
+    margin-top: 15px;
+}
+
+.right-icons li{
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.right-icons li:hover{
+    color: #c90000;
+}

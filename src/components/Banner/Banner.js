@@ -7,12 +7,11 @@ function Banner() {
     const [movie,setMovie] = useState()
     useEffect(()=>{
         axios.get(`/trending/all/week?api_key=${apiKey}`).then(response=>{
-            setMovie(response.data?.results[0])
+            setMovie(response.data?.results[1])
         })
     })
   return (
-    <div style={{backgroundImage:`url(${movie?imgUrl+movie.backdrop_path:""})`}}>
-        <div className='banner'>
+        <div className='banner' style={{backgroundImage:`url(${movie?imgUrl+movie.backdrop_path:""})`}}>
             <div className='content'>
                 <h2 className='title'>{movie?movie.title:""}</h2>
                 <div className='banner-buttons'>
@@ -23,7 +22,6 @@ function Banner() {
                 </div>
             <div className='fade_bottom'></div>
         </div>
-    </div>
   )
 }
 
