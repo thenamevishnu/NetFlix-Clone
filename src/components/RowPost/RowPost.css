@@ -50,12 +50,24 @@
 
 .stream .video{
     height:380px;
-    width: 700px;
+    width: 100%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 2px 2px 8px #000000;
+}
+
+@media screen and (max-width:786px){
+    .stream .video{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:786px) {
+    .stream .video{
+        width: 60%;
+    }
 }
 
 .close-btn{

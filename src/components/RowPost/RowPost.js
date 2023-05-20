@@ -51,7 +51,7 @@ function RowPost(props) {
                     movie.map((obj)=>{
                         return(
                             <div>
-                                <img key={obj.id} onClick={()=>{ if(!opend){handleMovie(obj.id); setOpened(true); }else{alert("One Video Is Streaming!")}; streamMovie(obj)}} className={props.isSmall ? "poster" : "main-poster"} src={obj?imgUrl+obj.backdrop_path:""} alt={obj?obj.title:""} />
+                                <img key={obj.id} onClick={()=>{ if(!opend){handleMovie(obj.id); setOpened(obj.title); streamMovie(obj) }else{ alert(opend + " is streaming!"); };}} className={props.isSmall ? "poster" : "main-poster"} src={obj?imgUrl+obj.backdrop_path:""} alt={obj?obj.title:""} />
                             </div>
                         );
                     })
