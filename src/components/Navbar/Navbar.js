@@ -12,7 +12,7 @@ function Navbar() {
               <li>Trending</li>
               <li>Action</li>
           </ul>
-          
+            
           <ul className='right-icons'>
               <li><i className='fa fa-search'></i> </li>
               <li><i className='fa fa-gift'></i></li>

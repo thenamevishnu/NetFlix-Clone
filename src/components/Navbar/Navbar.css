@@ -28,8 +28,9 @@
     list-style: none;
     z-index: 1;
     color: #fff;
-    margin-left: 170px;
-    margin-top: 15px;
+    position: fixed;
+    left: 160px;
+    top: 15px;
 }
 
 .left-links li{
@@ -46,8 +47,9 @@
     display: flex;
     z-index: 1;
     color: #fff;
-    margin-right: 90px;
-    margin-top: 15px;
+    position: fixed;
+    right: 80px;
+    top: 15px;
 }
 
 .right-icons li{
