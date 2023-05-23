@@ -20,7 +20,6 @@
     max-height: 250px;
     margin-right: 10px;
     transition: 0.15s;
-    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -28,7 +27,6 @@
     max-height: 120px;
     margin-right: 10px;
     transition: 0.15s;
-    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -71,12 +69,12 @@
 }
 
 .close-btn{
-    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
     font-size: 26px;
     color: red;
+    cursor: pointer;
 }
 
 .movie-title{

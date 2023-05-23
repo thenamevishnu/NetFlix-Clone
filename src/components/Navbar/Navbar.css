@@ -35,7 +35,6 @@
 
 .left-links li{
     margin-left: 20px;
-    cursor: pointer;
 }
 
 .left-links li:hover{
@@ -54,7 +53,6 @@
 
 .right-icons li{
     margin-left: 25px;
-    cursor: pointer;
 }
 
 .right-icons li:hover{
